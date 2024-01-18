@@ -7,6 +7,40 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="-1dp"
+        >
+        <ImageView
+            android:id="@+id/overlay_top"
+            android:src="@drawable/overlay"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/overlay"
+            android:layout_height="0dp"
+            android:rotation="180"
+            android:layout_weight=".4"
+            android:importantForAccessibility="no"
+            />
+
+        <View 
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_bar"
+            />
+
+        <ImageView
+            android:id="@+id/overlay_bottom"
+            android:src="@drawable/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4"
+            android:importantForAccessibility="no"
+        />
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/pickerWrapper"
         android:layout_width="match_parent"
@@ -14,6 +48,7 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         >
+
         <com.henninghall.date_picker.pickers.IosClone
             android:id="@+id/empty_start"
             android:tag="empty_start"
@@ -21,7 +56,7 @@
             custom:npv_ShownCount="5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             />
         <com.henninghall.date_picker.pickers.IosClone
             android:id="@+id/year"
@@ -35,7 +70,7 @@
             custom:npv_TextSizeSelected="21dp"
             custom:npv_TextColorSelected="#000000"
             custom:npv_TextColorNormal="#aaaaaa"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             android:contentDescription="@string/year_description"
             android:focusable="true"
             android:focusableInTouchMode="true" />
@@ -52,7 +87,7 @@
             custom:npv_TextSizeSelected="21dp"
             custom:npv_TextColorSelected="#000000"
             custom:npv_TextColorNormal="#aaaaaa"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             android:contentDescription="@string/month_description"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -70,7 +105,7 @@
             custom:npv_TextSizeSelected="21dp"
             custom:npv_TextColorSelected="#000000"
             custom:npv_TextColorNormal="#aaaaaa"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             android:contentDescription="@string/date_description"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -86,7 +121,7 @@
             custom:npv_TextSizeSelected="21dp"
             custom:npv_TextColorSelected="#000000"
             custom:npv_TextColorNormal="#aaaaaa"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             android:contentDescription="@string/day_description"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -97,7 +132,7 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             custom:npv_RespondChangeOnDetached="false"
             custom:npv_ShownCount="5"
             custom:npv_TextColorNormal="#aaaaaa"
@@ -114,7 +149,7 @@
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             custom:npv_RespondChangeOnDetached="false"
             custom:npv_ShownCount="5"
             custom:npv_TextColorNormal="#aaaaaa"
@@ -132,7 +167,7 @@
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             custom:npv_RespondChangeOnDetached="false"
             custom:npv_ShownCount="5"
             custom:npv_TextColorNormal="#aaaaaa"
@@ -151,40 +186,8 @@
             custom:npv_ShownCount="5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            custom:npv_DividerColor="#cccccc"
+            custom:npv_DividerColor="#00cccccc"
             />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="-1dp"
-        >
-        <ImageView
-            android:id="@+id/overlay_top"
-            android:src="@drawable/overlay"
-            android:layout_width="match_parent"
-            android:contentDescription="@string/overlay"
-            android:layout_height="0dp"
-            android:rotation="180"
-            android:layout_weight=".15"
-            android:importantForAccessibility="no"
-            />
-
-        <View
-            android:layout_height="0dp"
-            android:layout_weight=".70"
-            android:layout_width="match_parent"
-            />
-
-        <ImageView
-            android:id="@+id/overlay_bottom"
-            android:src="@drawable/overlay"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".15"
-            android:importantForAccessibility="no"
-        />
     </LinearLayout>
 
 </RelativeLayout>
